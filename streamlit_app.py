@@ -40,7 +40,7 @@ class Demo:
             options=list(self.style_map.keys()),
             format_func=lambda x:self.style_map[x][0]
             )
-        exp = st.sidebar.beta_expander('Knobs', expanded=True)
+        exp = st.sidebar
         with exp:
             inference_on = exp.selectbox(
                 label='Inference on',
