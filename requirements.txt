@@ -1,2 +1,4 @@
 torch
 transformers
+altair==4
+streamlit==1.17.0
