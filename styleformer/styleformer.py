@@ -71,8 +71,8 @@ class Styleformer():
       src_sentence = input_sentence
       input_sentence = ftc_prefix + input_sentence
       input_ids = self.ftc_tokenizer.encode(input_sentence, return_tensors='pt')
-      self.ftc_model = self.ftc_model.to(device)
-      input_ids = input_ids.to(device)
+      self.ftc_model = self.ftc_model.to(device="cuda:0")
+      input_ids = input_ids.to(device="cuda:0")
       
       preds = self.ftc_model.generate(
           input_ids,
@@ -99,8 +99,8 @@ class Styleformer():
       src_sentence = input_sentence
       input_sentence = ctf_prefix + input_sentence
       input_ids = self.ctf_tokenizer.encode(input_sentence, return_tensors='pt')
-      self.ctf_model = self.ctf_model.to(device)
-      input_ids = input_ids.to(device)
+      self.ctf_model = self.ctf_model.to(device="cuda:0")
+      input_ids = input_ids.to(device="cuda:0")
       
       preds = self.ctf_model.generate(
           input_ids,
@@ -127,8 +127,8 @@ class Styleformer():
       src_sentence = input_sentence
       input_sentence = atp_prefix + input_sentence
       input_ids = self.atp_tokenizer.encode(input_sentence, return_tensors='pt')
-      self.atp_model = self.atp_model.to(device)
-      input_ids = input_ids.to(device)
+      self.atp_model = self.atp_model.to(device="cuda:0")
+      input_ids = input_ids.to(device="cuda:0")
       
       preds = self.atp_model.generate(
           input_ids,
@@ -146,8 +146,8 @@ class Styleformer():
       src_sentence = input_sentence
       input_sentence = pta_prefix + input_sentence
       input_ids = self.pta_tokenizer.encode(input_sentence, return_tensors='pt')
-      self.pta_model = self.pta_model.to(device)
-      input_ids = input_ids.to(device)
+      self.pta_model = self.pta_model.to(device="cuda:0")
+      input_ids = input_ids.to(device="cuda:0")
       
       preds = self.pta_model.generate(
           input_ids,
