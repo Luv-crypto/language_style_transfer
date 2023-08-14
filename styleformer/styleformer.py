@@ -40,7 +40,7 @@ class Styleformer():
     else:
       print("Only CTF, FTC, ATP and PTA are supported in the pre-release...stay tuned")
 
-  def transfer(self, input_sentence, inference_on=-1, quality_filter=0.95, max_candidates=5):
+  def transfer(self, input_sentence, inference_on=0, quality_filter=0.95, max_candidates=5):
       if self.model_loaded:
         if inference_on == -1:
           device = "cpu"
